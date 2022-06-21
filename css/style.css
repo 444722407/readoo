@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 135px;
+    z-index: 999;
+    padding: 0 170px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .43), rgba(0, 0, 0, 0));
+}
+
+.header .logo {
+    width: 170px;
+    height: 48px;
+    background: url(../images/logo.png) no-repeat center/100% 100%;
+}
+
+.header .btn {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header .readoo {
+    font-size: 20px;
+    color: #fff;
+    background-color: transparent;
+    margin-left: auto;
+}
+
+.header .ntf {
+    font-size: 20px;
+    color: #ff009e;
+    font-weight: bold;
+    background: #fff;
+    margin-left: 30px;
+}
+
+.header .ios {
+    position: relative;
+    width: 32px;
+    height: 38px;
+    margin-left: 52px;
+    background: url(../images/icon_ios.png) no-repeat center/100% 100%;
+}
+.header .ios .hide_tips{
+    display: none;
+    position: absolute;
+    right: -10px;
+    top: 44px;
+    font-size: 20px;color: #fff;
+    width: 456px;height: 82px;
+    line-height: 94px;
+    text-align: center;
+    background: url(../images/icon_hide_tips.png) no-repeat center/100% 100%;
+}
+
+.header .ios:hover .hide_tips{
+    display: block;
+}
+.header .google {
+    width: 30px;
+    height: 32px;
+    margin-left: 36px;
+    margin-top: 4px;
+    background: url(../images/icon_google.png) no-repeat center/100% 100%;
+}
+.swiper_bg{
+    position: relative;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slogan{
+    position: absolute;
+    z-index: 99;
+    left: 15%;
+    top: 25%;
+    color: #fff;
+   
+}
+.slogan .subtitle{
+    font-size: 34px;text-transform: uppercase;
+}
+.slogan .title{
+    font-size: 72px;text-transform: uppercase; line-height: 1;
+}
+.slogan .title2{
+    font-size: 60px;text-transform: uppercase; line-height: 1.2;
+}
+.slogan .desc{
+    font-size: 24px;
+    width: 580px;
+    margin-top: 30px;
+    font-family: 'Roboto Light', sans-serif;
+}
+.slogan .down_box{
+    display: flex;
+    margin-top: 50px;
+}
+.slogan .down_box .btn{
+    position: relative;
+    margin-right: 30px;
+}
+.slogan .ios .hide_tips{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 74px;
+    font-size: 20px;color: #fff;
+    width: 456px;height: 82px;
+    line-height: 94px;
+    text-align: center;
+    background: url(../images/icon_hide_tips2.png) no-repeat center/100% 100%;
+}
+
+.slogan .ios:hover .hide_tips{
+    display: block;
+}
+.books{
+    position: relative;
+}
+.books .list{
+    width: 1246px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.books .list .item{
+    width: 274px;
+    height: 370px;
+    margin-right: 48px;
+    margin-bottom: 36px;
+}
+.books .list .item:nth-child(4n){
+    margin-right: 0;
+}
+.books .bottom{
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    height: 650px;
+    background-image: linear-gradient(to top,#000,rgba(0,0,0,0));
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.books .bottom .title{
+    font-size: 48px;margin-top: auto;text-transform: uppercase;
+}
+.books .bottom .subtitle{
+    font-size: 48px;font-family: 'Roboto Light', sans-serif;font-weight: normal;
+}
+.comments{
+    margin-top: 150px;
+}
+.comments .list{
+    display: flex;
+    justify-content: center;
+}
+.comments .list .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 156px;
+}
+
+.comments .list .item .emoji{
+    width: 40px;height: 40px;
+}
+.comments .list .item:nth-last-child(1){
+    margin-right: 0;
+}
+.comments .comment_cont{
+    margin-top: 10px;
+     width:338px;
+     height: 232px;
+     background: url(../images/bg_comment.png) no-repeat center/100% 100%;
+}
+.comments .comment_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comments .comment_cont .rating{
+    width: 192px;height: 24px;
+    background: url(../images/icon_star.png) no-repeat center/100% 100%;
+    margin-top: 50px;
+}
+.comments .comment_cont .desc{
+    font-size: 20px;color: #fff7fc;font-family: 'Roboto Light', sans-serif;
+    padding: 0 30px;
+    margin-top: 20px;
+}
+.tags{
+    margin-top: 226px;
+}
