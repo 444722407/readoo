@@ -1,0 +1,45 @@
+/* 
+@media screen and (max-width:1441px) {
+
+    .comments .list .item {
+        margin-right: 10px;
+    }
+
+    .books .list {
+        margin-top: 100px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .books .list .item {
+        margin-right: 20px;
+    }
+
+    .books .list .item:nth-child(4n) {
+        margin-right: 20px;
+    }
+
+    .tags .list {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 102px 60px 130px;
+        box-sizing: border-box;
+    }
+}
+
+
+@media screen and (max-width:1025px) {
+    .header {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-around;
+    }
+
+    .header .btn {
+        display: none;
+    }
+} */
