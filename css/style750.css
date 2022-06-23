@@ -85,6 +85,7 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-top: 0.1333rem;
 }
 .header .down{
     padding: 0 0.2667rem;
@@ -289,20 +290,35 @@ body{
 }
 .rewards .title{
     font-size: 0.8rem;text-align: center;text-transform: uppercase;
+    color:transparent;
+    background: linear-gradient(to bottom, #fff 30%, rgba(0,0,0,.05));
+    background-clip: text;
+    -webkit-background-clip: text;
 }
-.rewards .mask{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1.3333rem;
-    background-image: linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0));
-}
+
 .rewards .rewards_bg{
     position: relative;
-    top: -0.5rem;
-    width: 5.8133rem;
+    top: -1.4667rem;
+    width: 7.7333rem;
+    height: 4.5867rem;
     margin: 0 auto;
+    background: url(../images/rewards_bg.png) no-repeat center/100% 100%;
+}
+.rewards .rewards_bg_z{
+    width: 1.84rem;
+    margin: 0 auto;
+    position: relative;
+    left: 0.4rem;
+    animation: top_down 1s ease-in-out infinite alternate forwards;
+   
+}
+@keyframes top_down{
+    0%{
+        transform: translateY(-0.1333rem);
+    }
+    100%{
+        transform: translateY(0.1333rem);
+    }
 }
 
 .rewards_desc .aside {
@@ -428,4 +444,20 @@ body{
     color: #ff009e;
 }
 
-  
+.scrollAnimate{
+    opacity: 0;
+}
+.fade-up {
+    animation:fadeInUp 0.75s both;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 0.6667rem, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
