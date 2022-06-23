@@ -28,14 +28,15 @@ ul{
 .phone{
     display: none !important;
 }
+
 .header {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    height: 135px;
+    height: 120px;
     z-index: 999;
-    padding: 0 170px;
+    padding: 0 80px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -80,10 +81,14 @@ ul{
 }
 
 .header .ios {
+    cursor: pointer;
     position: relative;
+    margin-left: 52px;
+}
+.header .ios >a {
+    display: block;
     width: 32px;
     height: 38px;
-    margin-left: 52px;
     background: url(../images/icon_ios.png) no-repeat center/100% 100%;
 }
 .header .ios .hide_tips{
@@ -98,7 +103,7 @@ ul{
     background: url(../images/icon_hide_tips.png) no-repeat center/100% 100%;
 }
 
-.header .ios:hover .hide_tips{
+.header .ios >a:hover ~ .hide_tips{
     display: block;
 }
 .header .google {
@@ -154,19 +159,22 @@ ul{
     position: relative;
     margin-right: 30px;
 }
+.slogan .down_box .btn>a{
+    display: block;
+}
 .slogan .ios .hide_tips{
     display: none;
     position: absolute;
     left: 0;
     top: 74px;
     font-size: 20px;
-    width: 456px;height: 82px;
+    width: 460px;height: 85px;
     line-height: 94px;
     text-align: center;
     background: url(../images/icon_hide_tips2.png) no-repeat center/100% 100%;
 }
 
-.slogan .ios:hover .hide_tips{
+.slogan .ios >a:hover ~ .hide_tips{
     display: block;
 }
 .books{
