@@ -36,7 +36,7 @@
             <a href="https://play.google.com/store/apps/details?id=com.readoo.novel" class="google"></a>
         </header>
     </div>
-
+  
 
     <!-- phone -->
     <div class="phone">
@@ -112,7 +112,7 @@
             <li class="item"><img src="./images/books/8.jpg" alt=""></li>
         </ul>
         <div class="bottom scrollAnimate">
-            <h2 class="title">New plots and stories released daily</h2>
+            <h2 class="title">New plots and stories RELEASE daily</h2>
             <h3 class="subtitle roboto_light">A wonderful world is waiting for you to discover</h3>
         </div>
     </section>
@@ -147,7 +147,7 @@
 
     <section class="tags">
         <h2 class="title scrollAnimate">Various genres and <br> themes to choose</h2>
-        <p class="desc roboto_light scrollAnimate">It's a world that touches the heartstrings</p>
+        <p class="desc roboto_light scrollAnimate">It's a world that pull at your heartstrings</p>
         <ul class="list">
             <li class="item">
                 <div class="cont">
@@ -214,15 +214,15 @@
             <div class="aside">
                 <img src="./images/rewards_left.png" alt="" class="aside_img">
                 <div class="desc roboto_light">
-                    <p>You can get diamond rewards for reading</p>
+                    <p>You can get diamond rewards by reading</p>
                     <p>The more hours you read, the more diamonds you get</p>
                 </div>
             </div>
             <div class="aside">
                 <img src="./images/rewards_right.png" alt="" class="aside_img">
                 <div class="desc roboto_light">
-                    <p>Daily super diamond welfare activities, login to receive diamonds.</p>
-                    <p>Diamond rewards can exchange to many hings. The ways are easy and quick.</p>
+                    <p>Exciting daily activities, log in to receive diamond rewards.</p>
+                    <p>Diamond rewards can be exchanged to many items easily and quickly.</p>
                 </div>
             </div>
         </div>
@@ -231,8 +231,8 @@
 
     <section class="writer">
         <h2 class="title scrollAnimate">Become a writer</h2>
-        <p class="desc roboto_light">You are very welcome to submit your works to Readoo</p>
-        <p class="desc roboto_light">Let's spread your love of writing and share with the readers from all around the world</p>
+        <p class="desc roboto_light">You are very welcome to submit your works to Readoo.</p>
+        <p class="desc roboto_light">Let's spread your love of writing and share with the readers from all around the world.</p>
         <a href="https://readoowriting.com" class="action">GO NOW <i class="icon_arrow"></i></a>
         <p class="desc roboto_light" style="font-weight:normal;">A place where writers can really take control of their privileges!</p>
     </section>
@@ -240,7 +240,7 @@
     <footer class="footer_box">
         <div class="footer">
             <h2 class="title scrollAnimate">JOIN OUR COMMUNITY</h2>
-            <p class="subtitle scrollAnimate">Surprise activities and interesting people are waiting for you here！</p>
+            <p class="subtitle scrollAnimate">Surprise events and wonderful friends are waiting for you here！</p>
             <a href="#" class="readoo"></a>
             <ul class="link_box">
                 <li class="item"><a href="https://www.facebook.com/ReadooNovel"><img src="./images/icon_fb.png" alt="" class="link_icon"></a></li>
@@ -261,6 +261,8 @@
         </div>
     </footer>
 
+    <div class="toast phone phone_toast roboto_light">Sorry, No service is available ,<br>please wait~</div>
+
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script>
@@ -279,9 +281,27 @@
     </script>
     <script>
         $(function(){
+            var $phone_down = $('.phone .down');
+            var $tips = $('.phone_toast');
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.appVersion)){
+                //https://apps.apple.com/app/id1539386332
+                $phone_down.attr('href','javascript:;');
+                $phone_down.click(function(){
+                    $tips.show();
+                    setTimeout(() => {
+                        $tips.hide();
+                    }, 3000);
+                })
+            }
+            else {
+                $phone_down.attr('href','https://play.google.com/store/apps/details?id=com.readoo.novel');
+            }
             
+           
+            
+
             $(window).scroll(setScroll)
-            
+            setScroll()
             function setScroll(e){
                 let h = $(window).innerHeight();
                 let scrollTop = $(this).scrollTop();
