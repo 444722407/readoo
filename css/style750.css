@@ -434,7 +434,7 @@ body{
 }
 .footer .icon_email{
     display: inline-block;
-    width: 0.3467rem;height: 0.2667rem;
+    width:0.4rem;height:0.4rem;
     background: url(../images/icon_email.png) no-repeat center/100% 100%;
     margin-right: 8px;
 }
