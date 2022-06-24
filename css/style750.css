@@ -460,12 +460,13 @@ body{
     transform: translate(-50%,50%);
     font-size: 0.3733rem;
     color: #fff;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.9);
     border-radius: 0.16rem;
     text-align: center;
     width: 7.7333rem;
     padding: 0.6667rem 0;
     border: 1px solid rgba(255,255,255,.1);
+    font-weight: bold;
 }
 @keyframes fadeInUp {
     from {
